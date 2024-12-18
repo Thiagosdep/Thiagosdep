@@ -10,8 +10,9 @@ I’m a passionate developer focused on building efficient solutions, writing cl
 - 🎯 **Goal**: To create efficient solutions and maintain code quality with best practices and scalability.
 - 📚 **Key Skills**:
   - Languages: **TypeScript**, **JavaScript**, **Python**.
+  - Frameworks: **React**, **NestJS**, **NextJS**.
   - Databases: **MongoDB**, **Redis**, **PostgreSQL**.
-  - Cloud & DevOps: **AWS**, **Serverless Framework**, **Docker**.
+  - Cloud & DevOps: **AWS**, **GCP**, **Serverless Framework**, **Docker**.
   - Tools: **Git**, **GitHub Actions**, **Jest**, **ESLint**, **Prettier**.
 
 ---
@@ -45,7 +46,7 @@ I’m a passionate developer focused on building efficient solutions, writing cl
 
 ## 🌍 Where to Find Me:
 
-- 📧 **Email**: [seu-email@example.com](mailto:thiago_sousap@hotmail.com)
+- 📧 **Email**: [thiago_sousap@hotmail.com](mailto:thiago_sousap@hotmail.com)
 
 ---
 

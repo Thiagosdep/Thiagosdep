@@ -1,4 +1,3 @@
-import argparse
 import json
 import math
 import os
@@ -6,49 +5,60 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 USERNAME = "Thiagosdep"
-GRAPHQL_URL = "https://api.github.com/graphql"
+API_BASE = "https://api.github.com"
 
-QUERY = """
-{
-  user(login: "%s") {
-    repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
-      totalCount
-      nodes { stargazerCount }
-    }
-    contributionsCollection {
-      totalCommitContributions
-      restrictedContributionsCount
-    }
-    pullRequests { totalCount }
-    issues { totalCount }
-  }
-}
-"""
+
+def _get(url: str, headers: dict) -> dict | list:
+    print(f"  GET {url}")
+    req = Request(url, headers=headers)
+    with urlopen(req) as resp:
+        data = json.loads(resp.read())
+    print(f"  -> OK")
+    return data
 
 
 def fetch_stats(token: str) -> dict:
-    body = json.dumps({"query": QUERY % USERNAME}).encode()
-    req = Request(GRAPHQL_URL, data=body, headers={
-        "Authorization": f"bearer {token}",
-        "Content-Type": "application/json",
-    })
-    with urlopen(req) as resp:
-        user = json.loads(resp.read())["data"]["user"]
-
-    return {
-        "commits": (
-            user["contributionsCollection"]["totalCommitContributions"]
-            + user["contributionsCollection"]["restrictedContributionsCount"]
-        ),
-        "stars": sum(r["stargazerCount"] for r in user["repositories"]["nodes"]),
-        "prs": user["pullRequests"]["totalCount"],
-        "issues": user["issues"]["totalCount"],
-        "repos": user["repositories"]["totalCount"],
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json",
     }
 
+    user = _get(f"{API_BASE}/users/{USERNAME}", headers)
 
-def demo_stats() -> dict:
-    return {"commits": 1847, "stars": 342, "prs": 156, "issues": 89, "repos": 42}
+    stars = 0
+    page = 1
+    while True:
+        repos = _get(
+            f"{API_BASE}/users/{USERNAME}/repos?per_page=100&page={page}&type=owner",
+            headers,
+        )
+        if not repos:
+            break
+        stars += sum(r["stargazers_count"] for r in repos)
+        page += 1
+
+    prs = _get(
+        f"{API_BASE}/search/issues?q=author:{USERNAME}+type:pr",
+        headers,
+    )
+
+    issues = _get(
+        f"{API_BASE}/search/issues?q=author:{USERNAME}+type:issue",
+        headers,
+    )
+
+    commits = _get(
+        f"{API_BASE}/search/commits?q=author:{USERNAME}",
+        {**headers, "Accept": "application/vnd.github.cloak-preview+json"},
+    )
+
+    return {
+        "commits": commits.get("total_count", 0),
+        "stars": stars,
+        "prs": prs.get("total_count", 0),
+        "issues": issues.get("total_count", 0),
+        "repos": user.get("public_repos", 0),
+    }
 
 
 def fmt(n: int) -> str:
@@ -110,16 +120,20 @@ def generate_svg(stats: dict) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--demo", action="store_true")
-    args = parser.parse_args()
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise SystemExit("GITHUB_TOKEN environment variable is required")
 
     out = Path("assets/generated")
     out.mkdir(parents=True, exist_ok=True)
 
-    stats = demo_stats() if args.demo else fetch_stats(os.environ["GITHUB_TOKEN"])
-    (out / "stats.svg").write_text(generate_svg(stats))
-    print(f"Generated stats.svg: {stats}")
+    print(f"Fetching stats for {USERNAME}...")
+    stats = fetch_stats(token)
+    print(f"Stats: {stats}")
+
+    svg = generate_svg(stats)
+    (out / "stats.svg").write_text(svg)
+    print("Generated stats.svg")
 
 
 if __name__ == "__main__":

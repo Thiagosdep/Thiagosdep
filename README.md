@@ -52,7 +52,6 @@ const thiago = {
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Thiagosdep/Thiagosdep/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Thiagosdep/Thiagosdep/output/github-snake.svg" />
-  <img alt="contribution graph snake animation" src="https://raw.githubusercontent.com/Thiagosdep/Thiagosdep/output/github-snake.svg" />
 </picture>
 
 <br>
@@ -94,14 +93,10 @@ thiago_sousap@hotmail.com
 
 </div>
 
----
-
-<div align="center">
-
 ```
 > thiagosdep@dev:~$ exit
 ```
 
-_"The best code is the code you don't have to write."_
+---
 
-</div>
+<p align="center"><i>"The best code is the code you don't have to write."</i></p>

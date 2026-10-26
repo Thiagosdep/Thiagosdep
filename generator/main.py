@@ -110,7 +110,7 @@ def generate_svg(stats: dict) -> str:
         f'  <circle cx="38" cy="20" r="6" fill="#febc2e"/>\n'
         f'  <circle cx="56" cy="20" r="6" fill="#28c840"/>\n'
         f'  <text x="{w / 2}" y="24" fill="{dim}" font-family="{font}" font-size="12" text-anchor="middle">'
-        f"{USERNAME}@github — stats</text>\n"
+        f"{USERNAME}@github: ~/stats</text>\n"
         f'  <line x1="0" y1="40" x2="{w}" y2="40" stroke="{border}" stroke-width="1"/>\n'
         f'  <text x="20" y="65" fill="#3fb950" font-family="{font}" font-size="14">❯</text>\n'
         f'  <text x="38" y="65" fill="{text_c}" font-family="{font}" font-size="13">git stats --profile</text>\n'

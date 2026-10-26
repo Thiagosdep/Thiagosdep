@@ -1,102 +1,64 @@
-```
-> thiagosdep@dev:~$ whoami
-```
-
-# Thiago Sousa
-
-Software Engineer. Backend-focused, automation-driven.
-
-<br>
-
-## `stack --current`
-
-```ts
-const thiago = {
-  languages: ["TypeScript", "JavaScript", "Python"],
-  backend: ["NestJS", "Node.js", "Express"],
-  frontend: ["React", "Next.js"],
-  databases: ["PostgreSQL", "MongoDB", "Redis"],
-  cloud: ["AWS", "GCP", "Serverless Framework"],
-  devops: ["Docker", "GitHub Actions", "CI/CD"],
-  testing: ["Jest", "Vitest"],
-  ai_tools: ["Cursor", "Claude", "AI-assisted development"],
-  principles: ["Clean Code", "SOLID", "DDD", "Event-Driven"],
-};
-```
-
-<br>
-
-## `workflow --tools`
-
-**Cursor** as main IDE + **Claude** as coding partner. AI-augmented workflow for speed and quality.
-
-<br>
-
-## `cat philosophy.md`
-
-```
-- Readability over cleverness.
-- If it can be automated, it should be.
-- Architecture > frameworks. Frameworks change, good decisions stay.
-- The best code is the code you don't have to write.
-```
-
-<br>
-
-## `stats --github`
-
-<p align="center">
-  <img src="./assets/generated/stats.svg" alt="github stats" />
-</p>
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Thiagosdep/Thiagosdep/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Thiagosdep/Thiagosdep/output/github-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/surreal/portrait-dark.svg">
+  <img src="./assets/surreal/portrait-light.svg" width="880" alt="A framed painting of a man in a bowler hat whose silhouette is a window onto the sky. The caption inside the painting reads: This is not a developer.">
 </picture>
 
+<p>
+<b>Thiago Sousa de Paiva</b><br>
+Software engineer. Backend, mostly Node.js and TypeScript. Automates what repeats. São Paulo, Brazil.<br>
+This page is a picture of a developer. The developer is in the repositories.<br>
+<a href="mailto:thiago_sousap@hotmail.com">thiago_sousap@hotmail.com</a>
+</p>
+
+### *This is not a stack.*
+
+A stack is the set of decisions that survive a rewrite. These are the names the decisions currently wear.[^1]
+
+| Names | The decision underneath |
+|:--|:--|
+| TypeScript, JavaScript, Python | The language. One for the browser and the server; Python for the scripts that count things, like the card further down. |
+| Node.js, NestJS, Express | The server. Modules and injected dependencies, so the next person can find where a thing lives. |
+| React, Next.js | The browser, when the work needs one. |
+| PostgreSQL, MongoDB, Redis | Where the data lives, and what is kept close for speed. |
+| AWS, GCP, Serverless Framework | Where it runs, and how little of it has to be a server. |
+| Docker, GitHub Actions, CI/CD | The same build on every machine, including the one that repaints this page. |
+| Jest, Vitest | Proof, kept next to the code. |
+| Cursor, Claude | The editor and the second reader. The decisions are still made by hand. |
+| Clean Code, SOLID, DDD, event-driven | The rules the rest of this table follows. |
+
+Under all of it, four sentences.
+
+> Readability over cleverness.  
+> If it can be automated, it should be.  
+> Architecture > frameworks. Frameworks change, good decisions stay.  
+> The best code is the code you don't have to write.
+
+### *These are not repositories.*
+
+They are links. The code is on the other side.
+
+| Repository | What it is |
+|:--|:--|
+| [th-backoffice-api](https://github.com/Thiagosdep/th-backoffice-api) | A back office API. NestJS, TypeORM, PostgreSQL, JWT auth, Swagger docs, Docker. Laid out as clean architecture. |
+| [assets-management-api](https://github.com/Thiagosdep/assets-management-api) | A crypto portfolio API. Wallets and their assets, on versioned routes. |
+| [adr-patterns](https://github.com/Thiagosdep/adr-patterns) | The template for writing down why a decision was made. |
+| [personal-commits-and-branches-patterns](https://github.com/Thiagosdep/personal-commits-and-branches-patterns) | How commits and branches are named. Conventional Commits, followed. |
+
+<details>
+<summary aria-label="This is not a door. More repositories behind it.">This is not a door.</summary>
 <br>
+Behind it: <a href="https://github.com/Thiagosdep/th-backoffice-web">th-backoffice-web</a> (the front of the same back office), <a href="https://github.com/Thiagosdep/blockchain-node">blockchain-node</a>, <a href="https://github.com/Thiagosdep/pm2-lab">pm2-lab</a> and <a href="https://github.com/Thiagosdep/utils">utils</a>.
+</details>
 
-## `ls tools/`
+### *These are not numbers.*
 
-<div align="center">
+<p align="center"><img src="./assets/generated/stats.svg" width="495" alt="Commits, stars, pull requests, issues and repositories, counted by the GitHub API and drawn as bars."></p>
 
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Cursor](https://img.shields.io/badge/Cursor-000000?style=flat-square&logo=cursor&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
+A workflow repaints this card every twelve hours. The numbers are true; the bars are paint.[^2]
 
-</div>
+To write to the developer rather than the picture: [thiago_sousap@hotmail.com](mailto:thiago_sousap@hotmail.com). Replies in English or Portuguese.
 
-<br>
+<p align="center"><img src="./assets/surreal/hat.svg" width="120" alt="A bowler hat with nobody under it."></p>
 
-## `echo $CONTACT`
-
-```
-thiago_sousap@hotmail.com
-```
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/Email-0078D4?style=flat-square&logo=microsoftoutlook&logoColor=white)](mailto:thiago_sousap@hotmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Thiagosdep)
-
-</div>
-
-```
-> thiagosdep@dev:~$ exit
-```
-
----
-
-<p align="center"><i>"The best code is the code you don't have to write."</i></p>
+[^1]: Every `|` in this page's source is a table border. None of them is a pipe.
+[^2]: The star count is GitHub's. The portrait at the top keeps twelve of its own, at night.

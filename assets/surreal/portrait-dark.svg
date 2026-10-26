@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" width="880" height="360" role="img" aria-label="A painting of a man in a bowler hat whose silhouette is a window onto the sky. Caption: This is not a developer.">
+<title>A painting of a man in a bowler hat whose silhouette is a window onto the sky. Caption: This is not a developer.</title>
+<style>
+  @keyframes in{from{fill-opacity:0}}
+  @keyframes vanish{from{opacity:1}to{opacity:0}}
+  @keyframes appear{from{opacity:0}}
+  @keyframes drift{from{transform:translateX(-320px)}to{transform:translateX(0)}}
+  .w1{animation:in .5s .6s ease both}.w2{animation:in .5s 1s ease both}.w3{animation:in .5s 1.4s ease both}.w4{animation:in .5s 1.7s ease both}.w5{animation:in .5s 2.2s ease both}
+  .paint{animation:vanish 1.8s 3.3s ease-in-out both}
+  .sky{animation:appear 1.8s 3.3s ease-in-out both}
+  .ca{animation:drift 90s -30s linear infinite}
+  .cb{animation:drift 140s -75s linear infinite}
+  @media (prefers-reduced-motion:reduce){.w1,.w2,.w3,.w4,.w5,.paint,.sky,.ca,.cb{animation:none}}
+</style>
+<defs>
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2236"/><stop offset="1" stop-color="#121829"/></linearGradient>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b9bd5"/><stop offset="1" stop-color="#cfe6f5"/></linearGradient>
+  <filter id="soft" y="-50%" height="200%"><feGaussianBlur stdDeviation="1.4"/></filter>
+  <clipPath id="bust">
+    <ellipse cx="250" cy="120" rx="46" ry="40"/>
+    <ellipse cx="250" cy="130" rx="62" ry="9"/>
+    <ellipse cx="250" cy="162" rx="36" ry="44"/>
+    <rect x="234" y="198" width="32" height="22"/>
+    <path d="M106 352 C116 262 186 224 250 216 C314 224 384 262 394 352 Z"/>
+  </clipPath>
+</defs>
+<rect width="880" height="360" fill="url(#wall)"/>
+<g class="sky" clip-path="url(#bust)">
+  <rect x="100" y="60" width="300" height="300" fill="url(#sky)"/>
+  <g class="ca" fill="#f7fbff" opacity=".95" filter="url(#soft)">
+      <ellipse cx="140" cy="302" rx="38" ry="14"/>
+      <ellipse cx="170" cy="292" rx="30" ry="16"/>
+      <ellipse cx="200" cy="304" rx="28" ry="12"/>
+      <ellipse cx="115" cy="308" rx="22" ry="10"/>
+      <ellipse cx="300" cy="172" rx="34" ry="13"/>
+      <ellipse cx="325" cy="164" rx="26" ry="14"/>
+      <ellipse cx="350" cy="176" rx="24" ry="10"/>
+      <ellipse cx="230" cy="112" rx="30" ry="12"/>
+      <ellipse cx="255" cy="104" rx="24" ry="13"/>
+      <ellipse cx="280" cy="114" rx="22" ry="10"/>
+      <ellipse cx="460" cy="302" rx="38" ry="14"/>
+      <ellipse cx="490" cy="292" rx="30" ry="16"/>
+      <ellipse cx="520" cy="304" rx="28" ry="12"/>
+      <ellipse cx="435" cy="308" rx="22" ry="10"/>
+      <ellipse cx="620" cy="172" rx="34" ry="13"/>
+      <ellipse cx="645" cy="164" rx="26" ry="14"/>
+      <ellipse cx="670" cy="176" rx="24" ry="10"/>
+      <ellipse cx="550" cy="112" rx="30" ry="12"/>
+      <ellipse cx="575" cy="104" rx="24" ry="13"/>
+      <ellipse cx="600" cy="114" rx="22" ry="10"/>
+    </g>
+    <g class="cb" fill="#f7fbff" opacity=".8" filter="url(#soft)">
+      <ellipse cx="180" cy="250" rx="26" ry="10"/>
+      <ellipse cx="200" cy="244" rx="20" ry="11"/>
+      <ellipse cx="370" cy="336" rx="24" ry="9"/>
+      <ellipse cx="390" cy="330" rx="18" ry="10"/>
+      <ellipse cx="500" cy="250" rx="26" ry="10"/>
+      <ellipse cx="520" cy="244" rx="20" ry="11"/>
+      <ellipse cx="690" cy="336" rx="24" ry="9"/>
+      <ellipse cx="710" cy="330" rx="18" ry="10"/>
+    </g>
+</g>
+<g class="paint" opacity="0">
+  <g fill="#07090e">
+    <ellipse cx="250" cy="120" rx="46" ry="40"/>
+    <ellipse cx="250" cy="130" rx="62" ry="9"/>
+    <ellipse cx="250" cy="162" rx="36" ry="44"/>
+    <rect x="234" y="198" width="32" height="22"/>
+    <path d="M106 352 C116 262 186 224 250 216 C314 224 384 262 394 352 Z"/>
+  </g>
+  <polygon points="236,214 250,232 264,214" fill="#e8e6df"/>
+  <polygon points="246,218 254,218 258,262 250,272 242,262" fill="#7a2e2e"/>
+</g>
+<text x="620" y="208" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="34" fill="#e9e6dc"><tspan class="w1" fill-opacity="1">This</tspan> <tspan class="w2" fill-opacity="1">is</tspan> <tspan class="w3" fill-opacity="1">not</tspan> <tspan class="w4" fill-opacity="1">a</tspan> <tspan class="w5" fill-opacity="1">developer.</tspan></text>
+<text x="846" y="338" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="#e9e6dc" opacity=".55">Thiagosdep</text>
+<g fill="none">
+  <rect x="8" y="8" width="864" height="344" stroke="#8a7a52" stroke-width="6"/>
+  <rect x="12" y="12" width="856" height="336" stroke="#3b3426" stroke-width="1" opacity=".8"/>
+</g>
+</svg>

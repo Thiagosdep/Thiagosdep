@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 72" width="120" height="72" role="img" aria-label="A bowler hat with nobody under it.">
+  <title>A bowler hat with nobody under it.</title>
+  <ellipse cx="60" cy="58" rx="46" ry="7" fill="#7f8792"/>
+  <path d="M26 58 A34 32 0 0 1 94 58 Z" fill="#7f8792"/>
+  <path d="M26.6 52 H93.4 A34 32 0 0 1 94 58 H26 A34 32 0 0 1 26.6 52 Z" fill="#000" fill-opacity=".29"/>
+</svg>

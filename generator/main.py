@@ -71,50 +71,70 @@ def fmt(n: int) -> str:
 
 def generate_svg(stats: dict) -> str:
     w, h = 495, 270
-    bg, border, text_c, dim = "#0d1117", "#30363d", "#e6edf3", "#7d8590"
-    font = "'JetBrains Mono','Fira Code','Cascadia Code','SF Mono',monospace"
+    bg, cyan, mag, amber, ink, dim = "#05060b", "#19f6ff", "#ff2e88", "#ffb000", "#e8fbff", "#5d6680"
+    font = "'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace"
 
     items = [
-        ("Commits", stats["commits"], "#58a6ff"),
-        ("Stars", stats["stars"], "#f0883e"),
-        ("PRs", stats["prs"], "#a371f7"),
-        ("Issues", stats["issues"], "#3fb950"),
-        ("Repos", stats["repos"], "#d2a8ff"),
+        ("COMMITS", stats["commits"], cyan),
+        ("STARS", stats["stars"], amber),
+        ("PULL_REQ", stats["prs"], mag),
+        ("ISSUES", stats["issues"], cyan),
+        ("REPOS", stats["repos"], mag),
     ]
 
     max_sqrt = max(math.sqrt(v) for _, v, _ in items) or 1
-    bar_max = 180
-    y0, gap = 100, 32
+    seg_w, seg_gap, segs_max = 8, 3, 18
+    y0, gap = 104, 30
 
     rows = ""
     for i, (label, value, color) in enumerate(items):
         y = y0 + i * gap
-        bar_w = max(6, (math.sqrt(value) / max_sqrt) * bar_max)
-        delay = f"{0.2 + i * 0.12:.2f}s"
-
+        lit = max(1, round((math.sqrt(value) / max_sqrt) * segs_max)) if value else 0
+        delay = 0.2 + i * 0.12
+        segs = ""
+        for k in range(segs_max):
+            x = 205 + k * (seg_w + seg_gap)
+            on = k < lit
+            fill = color if on else dim
+            op = "0.9" if on else "0.18"
+            begin = f"{delay + k * 0.03:.2f}s"
+            segs += (
+                f'<rect x="{x}" y="{y - 11}" width="{seg_w}" height="13" fill="{fill}" opacity="0">'
+                f'<animate attributeName="opacity" from="0" to="{op}" dur="0.15s" begin="{begin}" fill="freeze"/></rect>'
+            )
         rows += (
             f'  <g opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="{delay}" fill="freeze"/>'
-            f'<text x="32" y="{y}" fill="{dim}" font-family="{font}" font-size="13">{label}</text>'
-            f'<text x="130" y="{y}" fill="{text_c}" font-family="{font}" font-size="14" font-weight="600">{fmt(value)}</text>'
-            f'<rect x="195" y="{y - 11}" width="0" height="13" rx="3" fill="{color}" opacity="0.85">'
-            f'<animate attributeName="width" from="0" to="{bar_w:.1f}" dur="0.5s" begin="{delay}" fill="freeze"/>'
-            f"</rect>"
+            f'<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="{delay:.2f}s" fill="freeze"/>'
+            f'<text x="28" y="{y}" fill="{dim}" font-family="{font}" font-size="12" letter-spacing="1">{label}</text>'
+            f'<text x="190" y="{y}" fill="{ink}" font-family="{font}" font-size="14" font-weight="700" text-anchor="end">{fmt(value)}</text>'
+            f"{segs}"
             f"</g>\n"
         )
 
+    corners = "".join(
+        f'<path d="{d}" fill="none" stroke="{cyan}" stroke-width="2"/>'
+        for d in (
+            "M8 26V8H26", f"M{w - 26} 8H{w - 8}V26",
+            f"M{w - 8} {h - 26}V{h - 8}H{w - 26}", f"M26 {h - 8}H8V{h - 26}",
+        )
+    )
+
     return (
         f'<svg width="{w}" height="{h}" viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg">\n'
-        f'  <rect width="{w}" height="{h}" rx="10" fill="{bg}" stroke="{border}" stroke-width="1"/>\n'
-        f'  <circle cx="20" cy="20" r="6" fill="#ff5f57"/>\n'
-        f'  <circle cx="38" cy="20" r="6" fill="#febc2e"/>\n'
-        f'  <circle cx="56" cy="20" r="6" fill="#28c840"/>\n'
-        f'  <text x="{w / 2}" y="24" fill="{dim}" font-family="{font}" font-size="12" text-anchor="middle">'
-        f"{USERNAME}@github: ~/stats</text>\n"
-        f'  <line x1="0" y1="40" x2="{w}" y2="40" stroke="{border}" stroke-width="1"/>\n'
-        f'  <text x="20" y="65" fill="#3fb950" font-family="{font}" font-size="14">❯</text>\n'
-        f'  <text x="38" y="65" fill="{text_c}" font-family="{font}" font-size="13">git stats --profile</text>\n'
+        f"  <defs>"
+        f'<pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="{cyan}" stroke-opacity=".06"/></pattern>'
+        f'<pattern id="s" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".35"/></pattern>'
+        f"</defs>\n"
+        f'  <rect width="{w}" height="{h}" fill="{bg}"/>\n'
+        f'  <rect width="{w}" height="{h}" fill="url(#g)"/>\n'
+        f'  <text x="28" y="36" fill="{mag}" font-family="{font}" font-size="12" letter-spacing="2">■ TELEMETRY</text>\n'
+        f'  <text x="{w - 28}" y="36" fill="{dim}" font-family="{font}" font-size="11" text-anchor="end">'
+        f"uplink: github.com/{USERNAME}</text>\n"
+        f'  <line x1="28" y1="50" x2="{w - 28}" y2="50" stroke="{cyan}" stroke-opacity=".25"/>\n'
+        f'  <text x="28" y="72" fill="{cyan}" font-family="{font}" font-size="13">$ telemetry --source github --refresh 12h</text>\n'
         f"{rows}"
+        f'  <rect width="{w}" height="{h}" fill="url(#s)"/>\n'
+        f"  {corners}\n"
         f"</svg>\n"
     )
 

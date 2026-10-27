@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img" aria-label="Thiago Sousa de Paiva, backend engineer. Cyberpunk HUD with a glitching name and a neural network carrying signals.">
+<title>Thiago Sousa de Paiva, backend engineer. Cyberpunk HUD with a glitching name and a neural network carrying signals.</title>
+<style>
+text{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono','Liberation Mono',monospace}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+@keyframes jit{0%,82%,100%{transform:translate(0,0)}84%{transform:translate(-5px,1px)}86%{transform:translate(4px,-2px)}88%{transform:translate(-2px,1px)}90%{transform:translate(0,0)}}
+@keyframes jit2{0%,82%,100%{transform:translate(0,0)}84%{transform:translate(5px,-1px)}86%{transform:translate(-4px,2px)}88%{transform:translate(3px,0)}90%{transform:translate(0,0)}}
+@keyframes slice{0%,83%,91%,100%{opacity:0;transform:translate(0,0)}84%{opacity:1;transform:translate(14px,0)}86%{opacity:1;transform:translate(-10px,0)}88%{opacity:1;transform:translate(6px,0)}90%{opacity:0}}
+@keyframes type{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes sweep{from{transform:translateY(-80px)}to{transform:translateY(440px)}}
+@keyframes flow{from{stroke-dashoffset:7}to{stroke-dashoffset:-100}}
+@keyframes node{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes boot{from{opacity:0}}
+.gc{animation:jit 4.2s steps(1) infinite}
+.gm{animation:jit2 4.2s steps(1) infinite}
+.sl{animation:slice 4.2s steps(1) infinite}
+.cur{animation:blink 1s steps(1) infinite}
+.band{animation:sweep 7s linear infinite}
+.pc,.pm{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:7 100;animation:flow 2.4s linear infinite}
+.pc{stroke:#19f6ff} .pm{stroke:#ff2e88}
+.nd{animation:node 2.4s ease-in-out infinite}
+.tk{transform-box:fill-box;animation:tick 38s linear infinite}
+</style>
+<defs>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#19f6ff" stroke-opacity=".07" stroke-width="1"/></pattern>
+  <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".35"/></pattern>
+  <linearGradient id="band" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19f6ff" stop-opacity="0"/><stop offset=".5" stop-color="#19f6ff" stop-opacity=".07"/><stop offset="1" stop-color="#19f6ff" stop-opacity="0"/></linearGradient>
+  <radialGradient id="glowM" cx=".78" cy=".5" r=".55"><stop offset="0" stop-color="#ff2e88" stop-opacity=".16"/><stop offset="1" stop-color="#ff2e88" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glowC" cx=".12" cy=".35" r=".5"><stop offset="0" stop-color="#19f6ff" stop-opacity=".10"/><stop offset="1" stop-color="#19f6ff" stop-opacity="0"/></radialGradient>
+  <filter id="neon" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+  <clipPath id="frame"><rect x="14" y="14" width="852" height="392"/></clipPath>
+  <clipPath id="tick"><rect x="44" y="376" width="792" height="30"/></clipPath>
+  <clipPath id="strip"><rect x="0" y="128" width="880" height="18"/></clipPath>
+</defs>
+<rect width="880" height="420" fill="#05060b"/>
+<rect width="880" height="420" fill="url(#grid)"/>
+<rect width="880" height="420" fill="url(#glowM)"/>
+<rect width="880" height="420" fill="url(#glowC)"/>
+<g class="b1">
+  <text x="44" y="50" font-size="12" fill="#ff2e88" letter-spacing="2">■ NEURAL FOUNDRY</text>
+  <text x="836" y="50" font-size="11" fill="#5d6680" text-anchor="end" letter-spacing="1">NODE SAO-PAULO.BR // UPLINK STABLE // EST. 2019</text>
+  <line x1="44" y1="64" x2="836" y2="64" stroke="#19f6ff" stroke-opacity=".25"/>
+</g>
+<g class="b2">
+  <text class="gc" x="44" y="178" font-size="78" font-weight="800" letter-spacing="3" fill="#19f6ff" opacity=".85">THIAGO</text>
+  <text class="gm" x="44" y="178" font-size="78" font-weight="800" letter-spacing="3" fill="#ff2e88" opacity=".85">THIAGO</text>
+  <text x="44" y="178" font-size="78" font-weight="800" letter-spacing="3" fill="#e8fbff" filter="url(#neon)">THIAGO</text>
+  <g clip-path="url(#strip)"><text class="sl" x="44" y="178" font-size="78" font-weight="800" letter-spacing="3" fill="#19f6ff">THIAGO</text></g>
+  <text x="48" y="222" font-size="28" font-weight="600" fill="#e8fbff" letter-spacing="6" opacity=".9">SOUSA DE PAIVA</text>
+</g>
+<g font-size="15">
+  <text x="48" y="276" fill="#19f6ff">&gt; backend engineer // automation // AI-augmented</text>
+  <text x="48" y="304" fill="#e8fbff" opacity=".75">&gt; builds systems that run themselves</text>
+</g>
+<g class="b3" font-size="12">
+  <rect x="48" y="334" width="10" height="10" fill="#ffb000"/>
+  <text x="66" y="344" fill="#ffb000" letter-spacing="2">SYS.STATUS ONLINE</text>
+  <rect class="cur" x="232" y="333" width="8" height="13" fill="#ffb000"/>
+</g>
+<g opacity=".9">
+  <text x="560" y="80" font-size="10" fill="#5d6680" text-anchor="middle">IN</text>
+  <text x="698" y="80" font-size="10" fill="#5d6680" text-anchor="middle">HIDDEN</text>
+  <text x="830" y="80" font-size="10" fill="#5d6680" text-anchor="middle">OUT</text>
+  <g stroke="#19f6ff" stroke-opacity=".14" stroke-width="1"><line x1="560" y1="118" x2="652" y2="96"/><line x1="560" y1="118" x2="652" y2="152"/><line x1="560" y1="118" x2="652" y2="208"/><line x1="560" y1="118" x2="652" y2="264"/><line x1="560" y1="118" x2="652" y2="320"/><line x1="560" y1="178" x2="652" y2="96"/><line x1="560" y1="178" x2="652" y2="152"/><line x1="560" y1="178" x2="652" y2="208"/><line x1="560" y1="178" x2="652" y2="264"/><line x1="560" y1="178" x2="652" y2="320"/><line x1="560" y1="238" x2="652" y2="96"/><line x1="560" y1="238" x2="652" y2="152"/><line x1="560" y1="238" x2="652" y2="208"/><line x1="560" y1="238" x2="652" y2="264"/><line x1="560" y1="238" x2="652" y2="320"/><line x1="560" y1="298" x2="652" y2="96"/><line x1="560" y1="298" x2="652" y2="152"/><line x1="560" y1="298" x2="652" y2="208"/><line x1="560" y1="298" x2="652" y2="264"/><line x1="560" y1="298" x2="652" y2="320"/><line x1="652" y1="96" x2="744" y2="148"/><line x1="652" y1="96" x2="744" y2="208"/><line x1="652" y1="96" x2="744" y2="268"/><line x1="652" y1="152" x2="744" y2="148"/><line x1="652" y1="152" x2="744" y2="208"/><line x1="652" y1="152" x2="744" y2="268"/><line x1="652" y1="208" x2="744" y2="148"/><line x1="652" y1="208" x2="744" y2="208"/><line x1="652" y1="208" x2="744" y2="268"/><line x1="652" y1="264" x2="744" y2="148"/><line x1="652" y1="264" x2="744" y2="208"/><line x1="652" y1="264" x2="744" y2="268"/><line x1="652" y1="320" x2="744" y2="148"/><line x1="652" y1="320" x2="744" y2="208"/><line x1="652" y1="320" x2="744" y2="268"/><line x1="744" y1="148" x2="830" y2="208"/><line x1="744" y1="208" x2="830" y2="208"/><line x1="744" y1="268" x2="830" y2="208"/></g>
+  <g><line class="pc" pathLength="100" style="animation-delay:-0.00s" x1="560" y1="118" x2="652" y2="96"/><line class="pc" pathLength="100" style="animation-delay:-0.74s" x1="560" y1="118" x2="652" y2="208"/><line class="pm" pathLength="100" style="animation-delay:-1.48s" x1="560" y1="118" x2="652" y2="320"/><line class="pm" pathLength="100" style="animation-delay:-2.22s" x1="560" y1="178" x2="652" y2="152"/><line class="pc" pathLength="100" style="animation-delay:-2.96s" x1="560" y1="178" x2="652" y2="264"/><line class="pc" pathLength="100" style="animation-delay:-0.50s" x1="560" y1="238" x2="652" y2="96"/><line class="pc" pathLength="100" style="animation-delay:-1.24s" x1="560" y1="238" x2="652" y2="208"/><line class="pm" pathLength="100" style="animation-delay:-1.98s" x1="560" y1="238" x2="652" y2="320"/><line class="pm" pathLength="100" style="animation-delay:-2.72s" x1="560" y1="298" x2="652" y2="152"/><line class="pc" pathLength="100" style="animation-delay:-0.26s" x1="560" y1="298" x2="652" y2="264"/><line class="pc" pathLength="100" style="animation-delay:-1.00s" x1="652" y1="96" x2="744" y2="148"/><line class="pc" pathLength="100" style="animation-delay:-1.74s" x1="652" y1="96" x2="744" y2="268"/><line class="pm" pathLength="100" style="animation-delay:-2.48s" x1="652" y1="152" x2="744" y2="208"/><line class="pm" pathLength="100" style="animation-delay:-0.02s" x1="652" y1="208" x2="744" y2="148"/><line class="pc" pathLength="100" style="animation-delay:-0.76s" x1="652" y1="208" x2="744" y2="268"/><line class="pc" pathLength="100" style="animation-delay:-1.50s" x1="652" y1="264" x2="744" y2="208"/><line class="pc" pathLength="100" style="animation-delay:-2.24s" x1="652" y1="320" x2="744" y2="148"/><line class="pm" pathLength="100" style="animation-delay:-2.98s" x1="652" y1="320" x2="744" y2="268"/><line class="pm" pathLength="100" style="animation-delay:-0.52s" x1="744" y1="208" x2="830" y2="208"/></g>
+  <circle cx="560" cy="118" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-0.00s" cx="560" cy="118" r="2.5" fill="#19f6ff"/><circle cx="560" cy="178" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-0.61s" cx="560" cy="178" r="2.5" fill="#19f6ff"/><circle cx="560" cy="238" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-1.22s" cx="560" cy="238" r="2.5" fill="#19f6ff"/><circle cx="560" cy="298" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-1.83s" cx="560" cy="298" r="2.5" fill="#19f6ff"/><circle cx="652" cy="96" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-0.04s" cx="652" cy="96" r="2.5" fill="#19f6ff"/><circle cx="652" cy="152" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-0.65s" cx="652" cy="152" r="2.5" fill="#19f6ff"/><circle cx="652" cy="208" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-1.26s" cx="652" cy="208" r="2.5" fill="#19f6ff"/><circle cx="652" cy="264" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-1.87s" cx="652" cy="264" r="2.5" fill="#19f6ff"/><circle cx="652" cy="320" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-0.08s" cx="652" cy="320" r="2.5" fill="#19f6ff"/><circle cx="744" cy="148" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-0.69s" cx="744" cy="148" r="2.5" fill="#19f6ff"/><circle cx="744" cy="208" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-1.30s" cx="744" cy="208" r="2.5" fill="#19f6ff"/><circle cx="744" cy="268" r="6" fill="#05060b" stroke="#19f6ff" stroke-width="2"/><circle class="nd" style="animation-delay:-1.91s" cx="744" cy="268" r="2.5" fill="#19f6ff"/><circle cx="830" cy="208" r="9" fill="#05060b" stroke="#ff2e88" stroke-width="2"/><circle class="nd" style="animation-delay:-0.12s" cx="830" cy="208" r="5.5" fill="#ff2e88"/>
+  <circle cx="830" cy="208" r="22" fill="none" stroke="#ff2e88" stroke-opacity=".5" filter="url(#soft)"/>
+</g>
+<g clip-path="url(#frame)">
+  <line x1="14" y1="372" x2="866" y2="372" stroke="#19f6ff" stroke-opacity=".25"/>
+  <g clip-path="url(#tick)"><text class="tk" x="44" y="394" font-size="11" fill="#5d6680">[ok] cortex.ts linked   [ok] nest.runtime online   [ok] postgres:5432 handshake   [ok] redis.cache warm   [ok] docker.build reproducible   [ok] gh-actions.cron armed   [ok] copilot.claude attached   [ok] aws.lambda cold-start nominal   [ok] cortex.ts linked   [ok] nest.runtime online   [ok] postgres:5432 handshake   [ok] redis.cache warm   [ok] docker.build reproducible   [ok] gh-actions.cron armed   [ok] copilot.claude attached   [ok] aws.lambda cold-start nominal   </text></g>
+  <rect class="band" x="0" y="0" width="880" height="80" fill="url(#band)"/>
+</g>
+<rect width="880" height="420" fill="url(#scan)"/>
+<path d="M12 38V12H38" fill="none" stroke="#19f6ff" stroke-width="2"/><path d="M842 12H868V38" fill="none" stroke="#19f6ff" stroke-width="2"/><path d="M868 382V408H842" fill="none" stroke="#19f6ff" stroke-width="2"/><path d="M38 408H12V382" fill="none" stroke="#19f6ff" stroke-width="2"/>
+</svg>

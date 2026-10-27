@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 28" width="880" height="28" role="img" aria-label="Data bus divider">
+<title>Data bus divider</title>
+<style>
+text{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono','Liberation Mono',monospace}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+@keyframes run{from{transform:translateX(-120px)}to{transform:translateX(1000px)}}
+.p1{animation:run 3.4s linear infinite} .p2{animation:run 3.4s linear -1.1s infinite} .p3{animation:run 5.2s linear -2.6s infinite}
+</style>
+<defs><linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#19f6ff" stop-opacity="0"/><stop offset=".15" stop-color="#19f6ff" stop-opacity=".45"/><stop offset=".85" stop-color="#ff2e88" stop-opacity=".45"/><stop offset="1" stop-color="#ff2e88" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="13" width="880" height="1.5" fill="url(#fade)"/>
+<g><rect class="p1" x="0" y="11" width="46" height="5" rx="1" fill="#19f6ff"/>
+<rect class="p2" x="0" y="11" width="22" height="5" rx="1" fill="#ff2e88"/>
+<rect class="p3" x="0" y="11" width="12" height="5" rx="1" fill="#ffb000"/></g>
+</svg>
